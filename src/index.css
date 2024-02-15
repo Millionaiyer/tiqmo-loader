@@ -1,0 +1,92 @@
+/* TIQMO LOADER */
+body {
+  background-color: #f2f2f2;
+}
+
+.bg-image {
+}
+.main_logo {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+}
+
+.loader_set {
+  /* background: #f2f2f2; */
+  direction: ltr;
+  inset: 0;
+  position: fixed;
+  top: 4%;
+  left: 32%;
+  /* z-index: 99999; */
+  width: 535px;
+  /* height: 500px; */
+}
+
+.loader_set .x_padding {
+  position: absolute;
+  top: 2.222em;
+  /* z-index: 199; */
+}
+
+.loader_images {
+  /* backface-visibility: hidden; */
+  /* background: #ddd; */
+  inset: 2px;
+  position: absolute;
+  will-change: transform;
+}
+
+/* .loader_images .cover:not(:first-child) {
+  visibility: hidden;
+} */
+
+body {
+  /* background-color: red; */
+}
+
+/* .spinner {
+  height: 20px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 20px;
+  z-index: 1999;
+}
+
+.spinner:before {
+  border: 2px solid hsla(0, 0%, 100%, 0.3);
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+#iniLoaderWrap .spinner:before {
+  border-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3) #000;
+}
+
+.spinner:not(.pause):before {
+  -webkit-animation: rotateSpinner 0.3s linear infinite;
+  animation: rotateSpinner 0.3s linear infinite;
+}
+
+@-webkit-keyframes rotateSpinner {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotateSpinner {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+} */
