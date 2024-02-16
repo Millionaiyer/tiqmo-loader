@@ -35,20 +35,20 @@ body {
   justify-content: center;
   transition: opacity 0.75s, visibility 0.75s;
 }
-/* 
+
 .spinner--hidden {
   opacity: 0;
   visibility: hidden;
-} */
+}
 
-.spinner::before {
+.spinner::after {
   content: '';
   width: 120px;
   height: 120px;
   border: 15px solid #f2f2f2;
   border-top-color: #009578;
   border-radius: 50%;
-  animation: returnload 5s ease;
+  animation: loading 5s ease;
 }
 /* 
 @keyframes loading {
@@ -59,7 +59,7 @@ body {
     transform: rotate(1turn);
   }
 } */
-@keyframes returnload {
+@keyframes loading {
   from {
     transform: rotate(0deg);
   }
