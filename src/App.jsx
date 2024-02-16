@@ -135,6 +135,7 @@ function App() {
         <div className="bg-image">
           <img src={currentImage} />
         </div>
+        <div className="spinner"></div>
       </div>
     </>
   );
