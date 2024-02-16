@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react';
-import loader from './assets/loader.png';
-import loader1 from './assets/loader_1.webp';
-import loader2 from './assets/loader_2.webp';
-import loader3 from './assets/loader_3.webp';
-import { mainLogo, tLogo } from './assets';
+import { useEffect, useState } from "react";
+import loader1 from "./assets/images/loader_1.webp";
+import loader2 from "./assets/images/loader_2.webp";
+import loader3 from "./assets/images/loader_3.webp";
+import { mainLogo, tLogo } from "./assets";
 // import loader4 from "./assets/loader_4.webp";
-import './App.css';
+import "./App.css";
 
 function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('Hello, World!');
+      console.log("Hello, World!");
     }, 2000);
     return () => clearTimeout(timer);
   });
@@ -29,39 +28,30 @@ function App() {
 
   return (
     <>
-      <div className="loader_set" id="loaderWrap">
-        <div className="x_padding">
-          <div className="main_logo">
-            <img src={mainLogo} alt="" />
+      <div className="flex justify-center items-center h-[90dvh]">
+        <div className="relative m-[0 auto] z-10 w-[40%]">
+          <img src={tLogo} alt="" />
+          <div className="absolute z-[-1] top-0 left-2">
+            <img src={currentImage} />
+          </div>
+          {/* <div className="spinner"></div> */}
+          <div className="loader-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#f2f2f2" />
+                  <stop offset="100%" stop-color="#f2f2f2" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="45" stroke-linecap="round" />
+            </svg>
           </div>
         </div>
-        <div className="loader_shape_set" id="loaderShape">
-          <div className="loader_images">
-            <i
-              className="full_bg cover active"
-              data-src="./assets/loader_1.webp?v=2"
-            ></i>
-            <i
-              className="full_bg cover"
-              data-src="./assets/loader_2.webp?v=2"
-            ></i>
-            <i
-              className="full_bg cover"
-              data-src="./assets/loader_3.webp?v=2"
-            ></i>
-            <i
-              className="full_bg cover"
-              data-src="./assets/loader_4.webp?v=2"
-            ></i>
-          </div>
-          <div className="loader_shape full_bg">
-            <img src={tLogo} alt="" />
-          </div>
-        </div>
-        <div className="bg-image">
-          <img src={currentImage} />
-        </div>
-        <div className="spinner "></div>
       </div>
     </>
   );

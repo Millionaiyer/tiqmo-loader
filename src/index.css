@@ -1,26 +1,14 @@
-/* TIQMO LOADER */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   /* background-color: red; */
 }
 
-.main_logo {
-  position: fixed;
-  top: 1%;
-  left: 1%;
-}
-
-.loader_set {
-  position: relative;
-  margin: 0 auto;
-  display: grid;
-  z-index: 2;
-  width: 535px;
-  height: 535px;
-}
-
 .bg-image {
-  width: 540px;
+  width: 700px;
   position: absolute;
   top: 0;
   left: 0;
@@ -37,13 +25,8 @@ body {
   transition: opacity 0.75s, visibility 0.75s;
 }
 
-.spinner--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .spinner::after {
-  content: '';
+  content: "";
   width: 120px;
   height: 120px;
   border: 15px solid #f2f2f2;
@@ -51,13 +34,26 @@ body {
   border-radius: 50%;
   animation: loading 5s ease;
 }
+/* animation-name: rotate;
+animation-duration: 0.7s;
+animation-iteration-count: 10; */
+
 /* 
 @keyframes loading {
-  from {
+  0% {
     transform: rotate(0turn);
+    border-right-color: #009578;
   }
-  to {
+  25% {
     transform: rotate(1turn);
+    border-right-color: #009578;
+  }
+
+  100% {
+    transform: rotate(0turn);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-right-color: transparent;
   }
 } */
 @keyframes loading {
@@ -65,9 +61,49 @@ body {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(300deg);
+    border-top-color: #009578;
+    border-left-color: #009578;
   } /* ignored */
   to {
     transform: rotate(0deg);
+    /* border-left-color: #f2f2f2;
+    border-right-color: #f2f2f2;
+    border-top-color: #f2f2f2; */
+  }
+}
+
+/* TEST */
+
+.loader-circle {
+  position: absolute;
+  top: 19.5%;
+  right: 4.5%;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: animate 3s linear forwards infinite;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 472;
+  }
+  25% {
+    stroke-dashoffset: 472;
+  }
+  50% {
+    stroke-dashoffset: 472;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 472;
   }
 }
